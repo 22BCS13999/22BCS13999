@@ -114,12 +114,13 @@ By following these steps, you'll be able to execute and interact with your token
 ## Authors
 
 => Md Bellal Hossain
+
 Github :https://github.com/22BCS13999
 
 LinkeIn: https://www.linkedin.com/in/bellal-hossain-705b15251/
 
 # License
-This project is licensed under the MIT License - see the link (
+This project is licensed under the MIT License - see the link (https://github.com/22BCS13999/22BCS13999/blob/main/LICENSE) for details.
   
 
 
