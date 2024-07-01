@@ -32,23 +32,23 @@ To run and interact with this program, you can use Remix, an online Solidity Int
 To deploy and interact with the "Bitcoin Cash" contract using Remix, follow these steps:
 
 Step-by-Step Instructions
-Go to the Remix Website:
+1.Go to the Remix Website:
 
 => Open https://remix.ethereum.org/
 
-Create a New File:
+2.Create a New File:
 
 => Click on the "+" icon in the left-hand sidebar.
 
 => Name the file ETH Proof/project.sol.
 
-Copy and Paste the Solidity Code:
+3.Copy and Paste the Solidity Code:
 
-=>Copy the Solidity code provided link : https://github.com/Sourov2002t/ETH_Project/blob/main/Token.sol which is visible on github page.
+=>Copy the Solidity code provided link : (https://github.com/22BCS13999/22BCS13999/blob/main/project.sol) which is visible on github page.
 
 =>Paste it into the newly created BifrostToken.sol file in Remix.
 
-Compile the Code:
+4.Compile the Code:
 
 => Click on the "Solidity Compiler" tab in the left-hand sidebar.
 
@@ -56,7 +56,7 @@ Compile the Code:
 
 =>Click on the "Compile project.sol" button.
 
-Deploy the Contract:
+5.Deploy the Contract:
 
 =>Click on the "Deploy & Run Transactions" tab in the left-hand sidebar.
 
@@ -66,7 +66,7 @@ Deploy the Contract:
 
 =>Click on the "Deploy" button.
 
-5.Interact with the Contract:
+6.Interact with the Contract:
   --// Method to mint new tokens
     mint(address, value) {
         this.totalSupply += value;
@@ -94,15 +94,15 @@ Deploy the Contract:
 }
 
 
-6.Check Balances:
+7.Check Balances:
 
 => Enter an address into the balances function and click on the call button to see the balance.
 
-7.View Token Details:
+8.View Token Details:
 
 => Click on the tokenName, tokenAbbrv, and totalSupply buttons to display their values.
 
-8.Observe the Output:
+9.Observe the Output:
 
 The script will execute and display the results of the minting and burning operations, as well as handle any errors gracefully.
 You should see the following output in your terminal:
