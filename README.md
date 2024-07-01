@@ -1,65 +1,70 @@
-## A Customizable ERC20-like Token Implementation in JavaScript
+## A Customizable ERC20-like Token Implementation in Solidity
 ## Overview / Description
-This project focuses on the development of a customizable token system inspired by the ERC20 standard, implemented in JavaScript. The aim is to provide a foundational understanding of how digital tokens can be created, managed, and manipulated using simple JavaScript classes and methods. This implementation includes basic functionalities such as minting new tokens, burning existing tokens, and checking token balances for specific addresses.
+This project focuses on the development of a customizable token system inspired by the ERC20 standard, implemented in Solidity. The aim is to provide a foundational understanding of how digital tokens can be created, managed, and manipulated using simple Solidity classes and methods. This implementation includes basic functionalities such as minting new tokens, burning existing tokens, and checking token balances for specific addresses.
 
-# Features:
+# The contract includes the following key features:
+|Token Details:
 
-Token Creation: Initialize a new token with a specified name and symbol.
-Minting Tokens: Add new tokens to the total supply and update the balance of a specified address.
-Burning Tokens: Reduce the total supply of tokens by removing tokens from a specified address.
-Balance Inquiry: Check the balance of tokens held by any address.
-Error Handling: Ensure proper management of token balances with error handling for insufficient balances during burn operations.
+-tokenName: Public variable storing the name of the token, "A Customizable ERC20-like Token Implementation in Solidity".
 
-# Key Components:
+-tokenAbbrv: Public variable storing the token's abbreviation, "BCH".
 
-Token Class: The MyToken class encapsulates the core functionalities of the token system, including methods for minting, burning, and checking balances.
-Public Variables: Store the token's name, symbol, and total supply.
-Balance Mapping: Utilize a JavaScript Map to keep track of the balances associated with different addresses.
-Example Usage: Demonstrate the use of the token system through minting and burning operations, and handle errors gracefully.
+-totalSupply: Public variable that tracks the total supply of the token, initially set to 0.
 
-# Potential Applications:
+|Balances Mapping:
 
-Educational Tool: Learn the basics of cryptocurrency and token management.
-Prototype for Blockchain Projects: Serve as a starting point for developing more complex blockchain-based token systems.
-Custom Token Creation: Easily create and manage custom tokens for various applications such as loyalty points, digital assets, and more.
+-balances: A mapping that associates each address with its respective token balance.
 
-# Future Enhancements:
+|Mint Function:
 
-Advanced Features: Implement additional ERC20 features like transferring tokens between addresses, approval, and allowance mechanisms.
-Integration with Blockchain: Connect the token system to a blockchain platform like Ethereum for real-world applications.
-User Interface: Develop a user-friendly interface for interacting with the token system.
+-mint(address to, uint256 amount): Allows the creation of new tokens. Increases the totalSupply by the specified amount and credits the amount to the balance of the to address.
 
-This project provides a practical introduction to the concepts and implementation of digital tokens, offering a hands-on approach to understanding the fundamentals of tokenomics and blockchain technology.
+|Burn Function:
+
+-burn(uint256 amount): Allows the destruction of existing tokens. Decreases the totalSupply by the specified amount and debits the amount from the balance of from msg.sender, provided that the address has enough tokens to burn.
+
+This program provides a foundational example of a simple token contract on the Ethereum blockchain, showcasing fundamental Solidity concepts and contract interactions.
+
+# Getting Started
+To run and interact with this program, you can use Remix, an online Solidity Integrated Development Environment (IDE). Here are the steps to get started:
 
 # Execution Instructions
-Follow these steps to execute and interact with the "A Customizable ERC20-like Token Implementation in JavaScript" project:
+To deploy and interact with the "Bitcoin Cash" contract using Remix, follow these steps:
 
-# Prerequisites
-Ensure you have Node.js installed on your machine. You can download it from Node.js official website.
-A code editor like Visual Studio Code or any text editor of your choice.
+Step-by-Step Instructions
+Go to the Remix Website:
 
-# Step-by-Step Instructions
+=> Open https://remix.ethereum.org/
 
-1.Set Up the Project:
+Create a New File:
 
-Create a new directory for your project.
-Open your terminal or command prompt.
-Navigate to your project directory.
-Initialize a new Node.js project by running: npm init -y
+=> Click on the "+" icon in the left-hand sidebar.
 
-2.Create the JavaScript File:
+=> Name the file ETH Proof/project.sol.
 
-In your project directory, create a new file named MyToken.js.
+Copy and Paste the Solidity Code:
 
-3.Add the Code:
+=>Copy the Solidity code provided link : https://github.com/Sourov2002t/ETH_Project/blob/main/Token.sol which is visible on github page.
 
-Copy and paste the provided MyToken class code into the MyToken.js file.
+=>Paste it into the newly created BifrostToken.sol file in Remix.
 
-4.Run the Script:
+Compile the Code:
 
-Open your terminal or command prompt.
-Navigate to your project directory.
-Run the script using Node.js by executing
+=> Click on the "Solidity Compiler" tab in the left-hand sidebar.
+
+=> Ensure the compiler version is set to 0.8.9 (or another compatible version).
+
+=>Click on the "Compile project.sol" button.
+
+Deploy the Contract:
+
+=>Click on the "Deploy & Run Transactions" tab in the left-hand sidebar.
+
+=>Ensure the environment is set to "Remix VM (London)" or a suitable network.
+
+=>Select the Bitcoin Cash contract from the dropdown menu.
+
+=>Click on the "Deploy" button.
 
 5.Interact with the Contract:
   --// Method to mint new tokens
