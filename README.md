@@ -1,27 +1,25 @@
-## A Customizable ERC20-like Token Implementation in Solidity
+## Basic ERC-20 Token Implementation with Minting and Burning Functions.
 ## Overview / Description
-This project focuses on the development of a customizable token system inspired by the ERC20 standard, implemented in Solidity. The aim is to provide a foundational understanding of how digital tokens can be created, managed, and manipulated using simple Solidity classes and methods. This implementation includes basic functionalities such as minting new tokens, burning existing tokens, and checking token balances for specific addresses.
+This contract implements a basic ERC-20-like token named "Bitcoin" (BCT) with minting and burning capabilities. It features public variables for the token's name, abbreviation, and total supply. The contract maintains a mapping of addresses to their token balances. The mint function, restricted to the contract owner, allows for increasing the total supply and adding tokens to a specified address. Similarly, the burn function, also owner-restricted, reduces the total supply and subtracts tokens from an address. Events are emitted for minting and burning actions to ensure transparency and track transactions on the blockchain.
 
 # The contract includes the following key features:
 |Token Details:
 
--tokenName: Public variable storing the name of the token, "A Customizable ERC20-like Token Implementation in Solidity".
+Token Details: This contract represents a token named "Bitcoin" with the abbreviation "BCT".
 
--tokenAbbrv: Public variable storing the token's abbreviation, "BCH".
+Total Supply: Tracks the total number of tokens in circulation.
 
--totalSupply: Public variable that tracks the total supply of the token, initially set to 0.
-
-|Balances Mapping:
+Mapping: Stores the balances of each address.
 
 -balances: A mapping that associates each address with its respective token balance.
 
-|Mint Function:
+Minting: Allows adding tokens to a recipient's balance and increasing the total supply.
 
 -mint(address to, uint256 amount): Allows the creation of new tokens. Increases the totalSupply by the specified amount and credits the amount to the balance of the to address.
 
-|Burn Function:
+Burning: Allows removing tokens from an account's balance and decreasing the total supply.
 
--burn(uint256 amount): Allows the destruction of existing tokens. Decreases the totalSupply by the specified amount and debits the amount from the balance of from msg.sender, provided that the address has enough tokens to burn.
+-mint(address to, uint256 amount): Allows the creation of new tokens. Increases the totalSupply by the specified amount and credits the amount to the balance of the to address.
 
 This program provides a foundational example of a simple token contract on the Ethereum blockchain, showcasing fundamental Solidity concepts and contract interactions.
 
@@ -66,33 +64,29 @@ Step-by-Step Instructions
 
 =>Click on the "Deploy" button.
 
-6.Interact with the Contract:
-  --// Method to mint new tokens
-    mint(address, value) {
-        this.totalSupply += value;
-        if (this.balances.has(address)) {
-            this.balances.set(address, this.balances.get(address) + value);
-        } else {
-            this.balances.set(address, value);
-        }
-    } 
+6.Interact with the Contract
 
---  // Method to burn tokens
-    burn(address, value) {
-        if (!this.balances.has(address) || this.balances.get(address) < value) {
-            throw new Error("Insufficient balance to burn");
-        }
+After deployment, you’ll see the deployed contract instance under "Deployed Contracts."
 
-        this.totalSupply -= value;
-        this.balances.set(address, this.balances.get(address) - value);
-    } 
+Mint Tokens:
 
---  // Method to get the balance of an address
-    balanceOf(address) {
-        return this.balances.get(address) || 0;
-    }
-}
+    Select the mint function from the contract instance.
+    
+    Enter an address and value to mint tokens.
+    
+    Click "transact" to execute the minting operation.
+    
+Burn Tokens:
 
+    Select the burn function from the contract instance.
+    
+    Enter an address and value to burn tokens.
+    
+    Click "transact" to execute the burning operation.
+    
+View Token Details:
+
+    Check tokenName, tokenAbbrv, totalSupply, and balances by calling their respective functions.
 
 7.Check Balances:
 
@@ -102,18 +96,11 @@ Step-by-Step Instructions
 
 => Click on the tokenName, tokenAbbrv, and totalSupply buttons to display their values.
 
-9.Observe the Output:
-
-The script will execute and display the results of the minting and burning operations, as well as handle any errors gracefully.
-You should see the following output in your terminal:
-Total Supply after minting: 100
-Balance of 0x123 after minting: 100
-Total Supply after burning: 50
-Balance of 0x123 after burning: 50
-Insufficient balance to burn
+9. Verify Events :
+    
+After performing minting or burning operations, you can check the "Console" tab to see the emitted events (Mint and Burn).
 
 By following these steps, you'll be able to execute and interact with your token implementation in JavaScript.
-
 
 
 ## Authors
